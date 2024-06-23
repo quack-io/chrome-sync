@@ -11,6 +11,10 @@
     "prettier": "^3.2.5",
     "turbo": "^2.0.4"
   },
-  "packageManager": "pnpm@8.15.6",
-  "name": "with-rollup"
+  "name": "with-rollup",
+  "packageManager": "yarn@1.22.18",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
