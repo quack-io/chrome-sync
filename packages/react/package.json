@@ -1,7 +1,7 @@
 {
   "name": "@chrome-sync/react",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "main": "src/index.ts",
   "scripts": {
     "dev": "tsc --watch",
@@ -13,8 +13,15 @@
     "access": "public"
   },
   "devDependencies": {
+    "@chrome-sync/core": "*",
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "@chrome-sync/core": "*"
+    "@repo/typescript-config": "*"
+  },
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "@changesets/cli": "^2.27.6"
   }
 }

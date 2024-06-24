@@ -2,6 +2,7 @@
   "name": "quack-v2-extension",
   "version": "1.0.0",
   "description": "Quack extension for zendesk + salesforce OS layer",
+  "private":true,
   "scripts": {
     "start": "webpack --watch --progress --config webpack.dev.js",
     "build": "webpack --progress --config webpack.prod.js"

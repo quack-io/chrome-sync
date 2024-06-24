@@ -1,80 +1,88 @@
-# Turborepo starter with Rollup
+## chrome-sync Documentation
 
-This is an official starter Turborepo, showing how Turborepo can be used with Rollup for bundling a `ui` package.
+### Overview and Purpose
 
-## Using this example
+The primary purpose of the `chrome-sync` project is to sync states across all scopes of Chrome extensions, facilitating easy alignment of states. It is an essential tool for every Chrome extension builder, simplifying the management of state between different extension components such as service workers, content scripts, popups, and side panels.
 
-Run the following command:
+### Installation
 
-```sh
-npx create-turbo@latest -e with-rollup
+#### Prerequisites
+
+No prerequisites or dependencies are required other than this library.
+
+#### Installation Steps
+
+To install the `chrome-sync` library, simply run the following command:
+
+```bash
+npm i @chrome-sync/react
 ```
 
-## What's inside?
+### Usage
 
-This Turborepo includes the following packages/apps:
+#### Main Features and Functionalities
 
-### Apps and Packages
+Managing state between Chrome extension scopes is challenging. The `chrome-sync` library simplifies this process by providing a streamlined way to synchronize state across different components of a Chrome extension, including service workers, content scripts, popups, and side panels.
 
-- `web`: a [Next.js](https://nextjs.org) app
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@repo/ui`: a React component library used by the `web` application, compiled with Rollup
+#### Example Usage
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Here is an example of how to use `chrome-sync` in a React application:
 
-### Utilities
+```jsx
+import React from "react";
+import { useChromeSync } from "@chrome-sync/react";
 
-This Turborepo has some additional tools already setup for you:
+const App: React.FC<{}> = () => {
+  const [counter, setCounter] = useChromeSync("counter");
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+  return (
+    <div style={{ width: "350px" }} className="popup-container">
+      counter: {counter}
+      <br />
+      <div>
+        <button onClick={() => setCounter(counter - 1)}>-</button>
+        <button onClick={() => setCounter(counter + 1)}>+</button>
+      </div>
+    </div>
+  );
+};
 
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
+export default App;
 ```
 
-### Remote Caching
+#### Configuration Options
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+There are no specific configuration options or settings that users need to be aware of.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+### Contributing
 
-```
-cd my-turborepo
-npx turbo login
-```
+#### Guidelines
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+- Follow best practices in coding and documentation.
+- Ensure that your code is well-tested and maintainable.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+#### Submitting Bug Reports and Feature Requests
 
-```
-npx turbo link
-```
+- Submit bug reports and feature requests by opening issues on the repository's GitHub page.
 
-## Useful Links
+### Support and Community
 
-Learn more about the power of Turborepo:
+#### Seeking Help or Support
 
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+- If you encounter any issues, please open an issue on the repository's GitHub page.
+
+#### Community Forums and Channels
+
+- Currently, there are no community forums or channels for discussion and collaboration. These may be introduced later.
+
+### License
+
+- The `chrome-sync` project is free for everyone to use.
+
+### Special Considerations
+
+- There are no special considerations or restrictions for using this library.
+
+---
+
+Feel free to reach out by opening an issue if you have any questions or need further assistance. Happy coding!
