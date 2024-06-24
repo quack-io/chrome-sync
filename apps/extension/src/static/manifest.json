@@ -1,0 +1,21 @@
+{
+  "name": "chrome-sync-test",
+  "description": "Chrome sync boilerplate",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "chrome sync test "
+  },
+  "permissions": ["background", "tabs", "notifications", "storage"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

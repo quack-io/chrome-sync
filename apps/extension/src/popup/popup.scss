@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+  background-color: #1c1c1c;
+}
+
+body {
+  font: normal 12px/16px helvetica, aria, sans-serif;
+  margin: 0 auto;
+}
+
+.popup-container{
+  padding:16px 16px 4px 16px;
+  color:#ECECED;
+  font-family: 'Roboto', sans-serif;
+  h1{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.disclaimer{
+  padding:6px;
+  border-radius: 6px;
+  background:#292929;
+  border:1px solid #55585B;
+  margin-top:12px;
+
+  font-size: 12px;
+  a{
+    color:#ECECED;
+    text-decoration:underline;
+  }
+}
+
+#wrap {
+  width: 250px;
+  padding-top: 9px;
+  font-size: 12px;
+  color: #888;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
+button {
+  height: 30px;
+  width: 60px;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.success{
+  background-color: #52BE80;
+  color: honeydew;
+}
+
+.current {
+  height: 30px;
+  width: 83%;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+  margin: 5px 0 15px 19px;
+}
+
+.log:hover {
+  color: honeydew;
+  background-color:#265c80;
+}  
+.success:hover {
+  color: honeydew;
+  background-color:#265c80;
+}

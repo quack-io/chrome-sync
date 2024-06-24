@@ -1,0 +1,20 @@
+{
+  "name": "@chrome-sync/react",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@chrome-sync/core": "*"
+  }
+}

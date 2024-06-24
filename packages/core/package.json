@@ -1,0 +1,28 @@
+{
+  "name": "@chrome-sync/core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.24.7",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.24.7",
+    "@types/chrome": "^0.0.268",
+    "jest": "^29.7.0"
+  }
+}
