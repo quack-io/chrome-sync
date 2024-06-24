@@ -34,7 +34,7 @@
     "@preact/signals-react": "^2.0.0",
     "@chrome-sync/react": "*",
     "aws-sdk": "^2.1532.0",
-    "axios": "^0.27.2",
+    "axios": "^1.7.2",
     "buffer": "^6.0.3",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
